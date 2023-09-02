@@ -11,7 +11,7 @@ def finalised_model():
 	model=YOLO('best.pt')
 	return model
 
-user_image=st.file_uploader('Upload your file',type=['jpg','png','jpeg'])
+user_image=st.file_uploader('Upload your X-Ray file',type=['jpg','png','jpeg'])
 button=st.button('Classify')
 if button and user_image is not None:
 	bytes_data=user_image.getvalue()
